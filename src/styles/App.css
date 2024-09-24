@@ -1,11 +1,18 @@
 :root {
+  /*Cor de fundo principal do corpo da página.*/
   --background-body: #E5E5E5;
+  /*Cor de fundo dos conteúdos principais*/
   --background-content: #1D1D1D;
+  /*Cor do texto principal.*/
   --text-color: #292929;
+  /*Cor primária da aplicação*/
   --primary-color: #4DFF7C;
+  /*Cor secundária, usada para botões e outros destaques.*/
   --second-color: #89DDFF;
 }
 
+/*Remove as margens do body*/
+/*Define uma família de fontes que garante boa compatibilidade entre dispositivos e sistemas operacionais.*/
 body {
   margin: 0;
   font-size: 1rem;
@@ -18,18 +25,25 @@ body {
   color: var(--text-color);
 }
 
+
 header {
+  /*O cabeçalho é fixado no topo da página com uma altura de 3.5rem*/
   position: fixed;
   width: 100%;
   height: 3.5rem;
   top: 0px;
   left: 0px;
+  /*Fundo do cabeçalho usa a cor --background-content*/
   background-color: var(--background-content);
+  /*O texto do cabeçalho usa a cor --background-body*/
   color: var(--background-body);
+  /*Adiciona uma sombra leve para destacar o cabeçalho*/
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   z-index: 10;
 }
 
+/*Centraliza o conteúdo do cabeçalho e usa display: flex para organizar itens de forma horizontal.*/
+/*Espaço é adicionado entre os elementos com justify-content: space-between*/
 .header__content {
   max-width: 1280px;
   padding: 0 1rem;
@@ -41,6 +55,8 @@ header {
   height: 3.5rem;
 }
 
+/*Usa flexbox para alinhar o logotipo e o nome ao centro verticalmente.*/
+/*Define a cor do logotipo e texto com --background-body e usa gap para separar o ícone do texto.*/
 .logo {
   font-size: 20px;
   display: flex;
@@ -49,98 +65,101 @@ header {
   color: var(--background-body);
 }
 
+
 main {
+  /*O conteúdo ocupa 80% da largura da página*/
   width: 80%;
+  /*Centraçiza o conteudo*/
   margin: auto;
   margin-bottom: 3rem;
   margin-top: 4.5rem;
+  /*Espaçamento é adicionado ao topo para compensar o cabeçalho fixo.*/
   padding: 2rem;
-  /* background-color: var(--background-content); */
-  /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
   border-radius: 3px;
 }
 
+
 form {
-  width: fit-content;
-  margin: auto;
+  width: fit-content; /* Ajusta a largura do formulário para caber seu conteúdo. */
+  margin: auto;  /* Centraliza o formulário*/
 }
 
 input, select {
-  border: none;
-  border-radius: 3px;
-  padding: 6px;
-  margin:  0 6px;
+  border: none; /* Remove as bordas padrões*/
+  border-radius: 3px; /* Arredonda as bordas*/
+  padding: 6px; /* Adiciona preenchimento interno de 6px. */
+  margin:  0 6px; /* Define margem de 6px*/
 }
 
 h3 {
-  text-align: center;
-  margin-top: 0;
+  text-align: center;  /* Centraliza o texto*/
+  margin-top: 0;  /* Remove a margem superior*/
 }
 
 button {
-  background-color: var(--second-color);
-  color: var(--text-color);
-  border: none;
-  cursor: pointer;
-  border-radius: 3px;
-  font-weight: bold;
+  background-color: var(--second-color); /* Define a cor de fundo*/
+  color: var(--text-color); /* Define a cor do texto*/
+  border: none; /* Remove as bordas*/
+  cursor: pointer; /* Define o cursor como "pointer" ao passar o mouse. */
+  border-radius: 3px; /* Arredonda as bordas*/
+  font-weight: bold; /* Deixa o texto em negrito. */
 }
 
 .buttons {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  gap: 0.5rem;
+  width: 100%; /* Define a largura*/
+  display: flex; /* Aplica o modelo flexbox*/
+  justify-content: space-around; /* Distribui os botões uniformemente*/
+  gap: 0.5rem;  /* Define um espaço entre os botões. */
 }
 
 .btn-submit {
-  background-color: var(--primary-color);
-  padding: 6px 12px;
-  cursor: pointer;
-  font-weight: bolder;
+  background-color: var(--primary-color); /* Define a cor de fundo*/
+  padding: 6px 12px;  /* Adiciona preenchimento de 6px em cima/baixo e 12px nos lados. */
+  cursor: pointer; /* Define o cursor como "pointer" ao passar o mouse. */
+  font-weight: bolder;  /* Deixa o texto em negrito. */
 }
 
 button:hover,
 .btn-submit:hover {
-  opacity: 0.8;
+  opacity: 0.8; /* Reduz a opacidade do botão para 80% ao passar o mouse*/
 }
 
 .all-users {
-margin-top: 3rem;
+margin-top: 3rem; /* Adiciona uma margem para separar essa seção dos outros elementos. */
 }
 
 .titles,
 .row {
-  width: 100%;
-  display: flex;
-  text-align: center;
+  width: 100%; /* Define a largura*/
+  display: flex; /* Aplica o modelo flexbox*/
+  text-align: center; /* Centraliza o conteúdo do texto */
 }
 .titles{
-  font-weight: bold;
-  background-color: var(--text-color);
-  color: var(--background-body);
+  font-weight: bold; /* Deixa o texto em negrito. */
+  background-color: var(--text-color); /* Define a cor de fundo*/
+  color: var(--background-body); /* Define a cor do texto*/
 }
 
 .titles div,
 .row input,
 .row select,
   .row div{
-  width: 20%;
-  padding: 0.5rem;
+  width: 20%; /* Define a largura*/
+  padding: 0.5rem;  /* Adiciona preenchimento de 0.5rem*/
 }
 
 .hide-form {
-  display: none;
+  display: none; /* Esconde completamente os elementos aplicados com essa classe. */
 }
 
 @media screen and (max-width: 920px) {
   main {
-    width: 90%;
+    width: 90%; /* Define a largura*/
   }
 }
 
 @media screen and (max-width: 520px) {
   main {
-    width: 100%;
+    width: 100%; /* Define a largura*/
   }
 }
